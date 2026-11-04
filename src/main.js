@@ -1,9 +1,24 @@
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { CustomEase } from "gsap/CustomEase";
+import Lenis from "lenis";
 gsap.registerPlugin(SplitText, CustomEase);
 
 document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.overflowY = "hidden";
+    // Initialize Lenis for smooth scrolling
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+
     gsap.registerPlugin(CustomEase, SplitText);
     CustomEase.create("hop", "0.8, 0, 0.02, 1");
 
@@ -122,6 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
     tl.to(".hero-copy > p .line", { ...revealProps, stagger: 0.1 }, "<0.125");
     tl.to(".hero-callout p", { ...revealProps, opacity: 1 }, "<0.125");
     tl.to("footer .line", { ...revealProps }, "<0.125");
+    tl.to(".digit-col span", { onStart:()=>{document.body.style.overflowY = "auto";} });
+    requestAnimationFrame(raf);
+
 });
 
 

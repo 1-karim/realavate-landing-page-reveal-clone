@@ -5,72 +5,87 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Realevate Landing Page | Codegrid</title>
+  <title>HEKAYA Landing page</title>
   <link rel="stylesheet" href="src/style.css" />
 </head>
 
-<body>
-  <nav>
-    <div class="nav-item">
-      <a href="/about">Archive</a>
+<body class="font-sans">
+  <nav class="fixed left-0 top-0 z-[1] flex w-full items-center p-12 max-[768px]:p-8">
+    <div class="nav-item flex flex-1">
+      <a class="overflow-hidden text-[1.1rem] font-[450] tracking-[-1%] text-dark no-underline" href="/about">Archive</a>
     </div>
-    <div class="nav-item">
-      <span class="logo">Hekaya</span>
+    <div class="nav-item flex flex-1 justify-center">
+      <span class="logo font-sanchez text-[20px] font-light tracking-[30%] text-dark uppercase"><img class="inline h-[60px] w-40 [transform:translateY(100%)] object-contain will-change-transform" src="/hekaya-logo.png" alt="Hekaya Logo" /></span>
     </div>
-    <div class="nav-item">
-      <a href="/contact">Commission</a>
+    <div class="nav-item flex flex-1 justify-end">
+      <a class="overflow-hidden text-[1.1rem] font-[450] tracking-[-1%] text-dark no-underline" href="/contact">Commission</a>
     </div>
   </nav>
-  <section class="hero">
-    <div class="marquee">
-      <div class="marquee-track">
-        <h1>Long Exposure</h1>
-        <h1>Long Exposure</h1>
-        <h1>Long Exposure</h1>
-        <h1>Long Exposure</h1>
-        <h1>Long Exposure</h1>
+  <section class="hero relative h-[100svh] w-full overflow-hidden">
+    <div class="marquee pointer-events-none absolute left-0 top-[45%] z-0 w-full -translate-y-[75%] overflow-hidden">
+      <div class="marquee-track flex w-max">
+        <h1 class="transform-[translateY(100%)] whitespace-nowrap pr-[0.5em] text-[clamp(6rem,12vw,14rem)] leading-[1.25] font-semibold tracking-[-1%] text-dark will-change-transform">Long Exposure</h1>
+        <h1 class="transform-[translateY(100%)] whitespace-nowrap pr-[0.5em] text-[clamp(6rem,12vw,14rem)] leading-[1.25] font-semibold tracking-[-1%] text-dark will-change-transform">Long Exposure</h1>
+        <h1 class="transform-[translateY(100%)] whitespace-nowrap pr-[0.5em] text-[clamp(6rem,12vw,14rem)] leading-[1.25] font-semibold tracking-[-1%] text-dark will-change-transform">Long Exposure</h1>
+        <h1 class="transform-[translateY(100%)] whitespace-nowrap pr-[0.5em] text-[clamp(6rem,12vw,14rem)] leading-[1.25] font-semibold tracking-[-1%] text-dark will-change-transform">Long Exposure</h1>
+        <h1 class="transform-[translateY(100%)] whitespace-nowrap pr-[0.5em] text-[clamp(6rem,12vw,14rem)] leading-[1.25] font-semibold tracking-[-1%] text-dark will-change-transform">Long Exposure</h1>
       </div>
 
     </div>
 
-    <div class="hero-copy">
+    <div class="hero-copy absolute bottom-[15svh] left-1/2 z-0 flex w-[35%] -translate-x-1/2 flex-col items-center gap-6 text-center max-[768px]:w-[85%]">
 
-      <p>
+      <p class="text-[1.1rem] font-[450] tracking-[-1%] text-dark">
 
         A growing archive of people, places and the small moments between
         them.
 
       </p>
       <div class="hero-callout">
-        <p>Exhibition Opens 14 Nov</p>
+        <p class="w-max [transform:translateY(100%)] border-2 border-dark px-6 py-2 text-[1.1rem] font-[450] tracking-[-1%] text-dark uppercase opacity-0 will-change-transform">Exhibition Opens 14 Nov</p>
       </div>
 
     </div>
 
-    <div class="hero-overlay">
-      <div class="counter">
+    <div class="hero-overlay absolute left-0 top-0 z-[2] h-[100svh] w-full bg-dark [clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)]">
+      <div class="counter absolute bottom-[10svh] left-1/2 flex h-[var(--digit-h)] [--digit-h:1.65rem] -translate-x-1/2 overflow-hidden">
 
-        <div class="digit-col"></div>
-        <div class="digit-col"></div>
+        <div class="digit-col flex flex-col"></div>
+        <div class="digit-col flex flex-col"></div>
       </div>
 
     </div>
 
-    <div class="hero-img-wrapper">
-      <div class="hero-img"><img src="/img1.png" alt="" /></div>
-      <div class="hero-img"><img src="/img2.png" alt="" /></div>
-      <div class="hero-img"><img src="/img3.png" alt="" /></div>
-      <div class="hero-img"><img src="/img4.png" alt="" /></div>
-      <div class="hero-img"><img src="/img5.png" alt="" /></div>
-      <div class="hero-img"><img src="/img1.png" alt="" /></div>
+    <div class="hero-img-wrapper absolute top-1/2 left-1/2 z-10 aspect-[4/5] w-[20%] max-w-[250px] [transform:translate(-50%,-50%)] overflow-hidden max-[768px]:w-[60%]">
+      <div class="hero-img absolute top-1/2 left-1/2 h-full w-full [clip-path:polygon(50%_50%,50%_50%,50%_50%,50%_50%)] -translate-x-1/2 -translate-y-1/2 will-change-[clip-path]"><img class="h-full w-full transform-[scale(2)] object-cover will-change-transform" src="/img1.png" alt="" /></div>
+      <div class="hero-img absolute top-1/2 left-1/2 h-full w-full [clip-path:polygon(50%_50%,50%_50%,50%_50%,50%_50%)] -translate-x-1/2 -translate-y-1/2 will-change-[clip-path]"><img class="h-full w-full transform-[scale(2)] object-cover will-change-transform" src="/img2.png" alt="" /></div>
+      <div class="hero-img absolute top-1/2 left-1/2 h-full w-full [clip-path:polygon(50%_50%,50%_50%,50%_50%,50%_50%)] -translate-x-1/2 -translate-y-1/2 will-change-[clip-path]"><img class="h-full w-full transform-[scale(2)] object-cover will-change-transform" src="/img3.png" alt="" /></div>
+      <div class="hero-img absolute top-1/2 left-1/2 h-full w-full [clip-path:polygon(50%_50%,50%_50%,50%_50%,50%_50%)] -translate-x-1/2 -translate-y-1/2 will-change-[clip-path]"><img class="h-full w-full transform-[scale(2)] object-cover will-change-transform" src="/img4.png" alt="" /></div>
+      <div class="hero-img absolute top-1/2 left-1/2 h-full w-full [clip-path:polygon(50%_50%,50%_50%,50%_50%,50%_50%)] -translate-x-1/2 -translate-y-1/2 will-change-[clip-path]"><img class="h-full w-full transform-[scale(2)] object-cover will-change-transform" src="/img5.png" alt="" /></div>
+      <div class="hero-img absolute top-1/2 left-1/2 h-full w-full [clip-path:polygon(50%_50%,50%_50%,50%_50%,50%_50%)] -translate-x-1/2 -translate-y-1/2 will-change-[clip-path]"><img class="h-full w-full transform-[scale(2)] object-cover will-change-transform" src="/restaurant-9.png" alt="" /></div>
     </div>
 
   </section>
+  <section class="about">
+    <div class="about-copy">
+      <h2 class="text-[1.5em] font-bold">About</h2>
+      <p class="text-[1.1rem] font-[450] tracking-[-1%] text-dark">
+        Hekaya is a growing archive of people, places and the small moments
+        between them. The project is a collaboration between photographer
+        Karim Ben Khelifa and writer/curator Rania Matar. The archive is
+        intended to be a resource for artists, curators, and researchers
+        interested in exploring the intersection of photography, storytelling,
+        and social justice.
+      </p>
+    </div>
+    <div class="about-img">
+      <img class="inline h-full w-full object-cover" src="/img6.png" alt="" />
+    </div>
+  </section>
+  <footer class="absolute bottom-0 left-0 z-[1] flex w-full items-center justify-between p-12 max-[768px]:p-8">
 
-  <footer>
-
-    <p>Lumen &copy; 2026</p>
-    <p>Est. Copenhagen</p>
+    <p class="text-[1.1rem] font-[450] tracking-[-1%] text-dark">Lumen &copy; 2026</p>
+    <p class="text-[1.1rem] font-[450] tracking-[-1%] text-dark">Est. Copenhagen</p>
   </footer>
   <script type="module" src="src/main.js"></script>
 </body>
